@@ -647,7 +647,7 @@ def _query_dns(domain, record_type, nameservers=None, timeout=2.0,
         resolver.nameservers = nameservers
     resolver.timeout = timeout
     resolver.lifetime = timeout * 2
-    resolver.retry_servfail = true
+    resolver.retry_servfail = True
     if record_type == "TXT":
         resource_records = list(map(
             lambda r: r.strings,
